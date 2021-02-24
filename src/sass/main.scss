@@ -1,0 +1,26 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'normalize.scss';
+@import 'base.scss';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+
+// Revolution Slider Start
+@import 'revolution/layers';
+@import 'revolution/navigation';
+@import 'revolution/settings';
+// Revolution Slider End
+
+
+@import 'site-sections/header';
+@import 'site-sections/intro';
+@import 'site-sections/features';
+@import 'site-sections/for-whom';
+@import 'site-sections/equipment';
+@import 'site-sections/allery';
+
+//Components Start
+@import 'components/slider-styles';
+@import 'components/action-btn';
+//Components End
