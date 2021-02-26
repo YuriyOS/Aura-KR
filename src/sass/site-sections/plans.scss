@@ -1,0 +1,273 @@
+.plans {
+  padding-top: 80px;
+  position: relative;
+}
+
+.plans__title {
+  position: relative;
+
+  span {
+    color: red;
+  }
+}
+
+.arrows-position {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.plans-slider {
+  margin: 0 auto;
+  width: 420px;
+  max-width: 100%;
+  font-weight: normal;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+}
+.plans-slider__item {
+  margin: 0px 10px;
+  cursor: pointer;
+  border: 2px solid #c7a978;
+  background-color: #2a2a2d;
+
+  &:focus,
+  &:hover {
+    .plans__tech-info {
+      background-color: #2a2a2d;
+    }
+
+    .plans__drawing {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.plans__drawing {
+  padding: 25px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+  transition: transform 0.3s ease;
+}
+
+.plans__tech-info {
+  padding: 5px;
+  position: relative;
+  background-color: #c7a978;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: -40px;
+    right: 8px;
+    background-image: url(/images/plans/arrow.png);
+  }
+}
+
+.plans__info {
+  margin-bottom: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+// === Modal Dialog Start ===
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  margin: 0 auto;
+  padding: 10px;
+  width: 90%;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #2a2a2d;
+  background-color: #fff;
+
+  @media (min-width: 576px) {
+    width: 70%;
+  }
+
+  @media (min-width: 768px) {
+    width: 90%;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: 992px) {
+    width: 70%;
+  }
+}
+
+.modal-dialog__close {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-image: url('/images/btn-close.png');
+  cursor: pointer;
+  outline: none;
+}
+
+.plan-drawing-wrap {
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+}
+
+.plan-info-wrap {
+  @media (min-width: 768px) {
+    padding: 10px;
+    width: 30%;
+  }
+}
+
+.plan-info {
+  max-width: 420px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+.plans-info__title {
+  font-weight: 600;
+  color: #2a2a2d;
+}
+
+.modal-dialog__plan-drawing {
+  margin: 30px auto 0;
+  display: block;
+  max-width: 100%;
+  max-height: 85vh;
+  border-bottom: 2px solid red;
+
+  @media (min-width: 768px) {
+    border-bottom: none;
+  }
+}
+
+.modal-dialog__plan-name {
+  margin: 15px auto 15px;
+}
+
+.plan-info__item {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plan-info__item--margin {
+  margin: 15px 0px;
+}
+
+.plans-info__name {
+  margin: 0px;
+  color: #2a2a2d;
+}
+
+.plans-info__value {
+  margin: 0px;
+  color: red;
+}
+
+.plan-info__btn {
+  background-color: red;
+}
+
+// === Discuss Details Form Start ===
+
+.details-form {
+  height: 100%;
+  display: flex;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: -100%;
+  background-color: #2a2a2d;
+  transition: 0.5s ease all;
+  z-index: 1000;
+}
+
+.details-form--visible {
+  bottom: 0;
+  transition: 0.5s ease all;
+}
+
+.details-form__form {
+  .error {
+    color: #fff;
+  }
+}
+
+.details-form__action-box {
+  margin: auto;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.action-box__title--color,
+.action-box__descriptor--color {
+  color: #fff;
+}
+
+.details-form__form-input {
+  width: 100%;
+}
+
+.details-form__action-btn {
+  margin: 0 auto;
+  background-color: red;
+}
+
+.close-btn-wrap {
+  padding: 25px 10px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.close-btn {
+  width: 50px;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(45deg);
+
+  &::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(-90deg);
+  }
+}
+// === Discuss Details Form End ===

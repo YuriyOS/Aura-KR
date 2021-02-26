@@ -48,7 +48,7 @@
 .dots-style {
   margin: 30px 0 0;
   padding: 0px;
-  width: 250px;
+  width: 200px;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -71,13 +71,15 @@
 }
 
 .dots-style button {
-  background-color: #ffffff;
+  background-color: #f6f6f6;
 }
 
 .dots-style li[class='slick-active'] button {
-  background: red;
+  background: #65a0b3;
 }
 // Dots Settings End
+
+// Gallery Slider Start
 
 .gallery-slider {
 
@@ -111,7 +113,7 @@
   }
 }
 
-.building-progress-slider__img-lg {
+.gallery-slider__img-lg {
   &:focus {
     outline: none;
   }
@@ -125,3 +127,45 @@
     outline: none;
   }
 }
+
+.gallery-slider__prev {
+  left: 10px;
+  //top: unset;
+  bottom: -50px;
+
+  @media (min-width: 768px) {
+    left: 10%;
+  }
+}
+
+.gallery-slider__next {
+  right: 10px;
+  //top: unset;
+  bottom: -50px;
+
+  @media (min-width: 768px) {
+    right: 10%;
+  }
+}
+// Gallery Slider End
+
+// Plans Slider Start
+//.long-slider__prev {
+//  left: 3%;
+//  //background-image: url('/images/arrow-left.png');
+//
+//  @media (min-width: 768px) {
+//    margin-right: 30px;
+//    left: auto;
+//  }
+//}
+//
+//.long-slider__next {
+//  right: 3%;
+//  //background-image: url('/images/arrow-right.png');
+//
+//  @media (min-width: 768px) {
+//    right: auto;
+//  }
+//}
+// Plans Slider End

@@ -6,6 +6,10 @@
   }
 }
 
+.features__h2 {
+  margin-bottom: 50px;
+}
+
 .bg-1 {
   color: white;
   background-color: #2a2a2d;
@@ -17,9 +21,9 @@
 
 .features__img {
   display: block;
-  width: 370px;
+  width: 100%;
   height: auto;
-  max-width: 100%;
+  //max-width: 100%;
 
   @media (min-width: 768px) {
     width: 300px;
@@ -151,11 +155,11 @@
     height: 360px;
   }
 
-  .benefits__heading_margin {
+  .benefits__heading--margin {
     margin-bottom: 30px;
   }
 
-  .features__img_less-size {
+  .features__img--less-size {
     width: 458px;
     height: 360px;
   }

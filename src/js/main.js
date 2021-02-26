@@ -9,6 +9,9 @@
 //= ./revolution/revolution.extension.slideanims.min.js
 //= ./revolution/revolution.extension.video.min.js
 
+//= ../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js
+
+
 $(function() {
 
   // $('#home_full_slider').show().revolution();
@@ -150,10 +153,10 @@ $('.classic-slider').slick({
     '<button type="button" class="slider-control slider-next"></button>',
 
   responsive: [
-    {
-      breakpoint: 10000,
-      settings: 'unslick',
-    },
+    // {
+    //   breakpoint: 10000,
+    //   settings: 'unslick',
+    // },
     {
       breakpoint: 992,
       settings: {
@@ -179,10 +182,10 @@ $('.gallery-slider').slick({
   slidesToScroll: 1,
 
   prevArrow:
-    '<button type="button" class="slider-control slider-prev"></button>',
+    '<button type="button" class="slider-control slider-prev gallery-slider__prev"></button>',
 
   nextArrow:
-    '<button type="button" class="slider-control slider-next"></button>',
+    '<button type="button" class="slider-control slider-next gallery-slider__next"></button>',
 
   responsive: [
     {
@@ -196,4 +199,62 @@ $('.gallery-slider').slick({
     },
   ],
 });
+
+// = Plans Slider Start =
+$('.long-slider').slick({
+  arrows: true,
+  dots: false,
+  dotsClass: 'dots-style',
+  // appendArrows: $('.long-slider__arrows'),
+
+  prevArrow:
+    '<button type="button" class="slider-control slider-prev long-slider__prev"></button>',
+
+  nextArrow:
+    '<button type="button" class="slider-control slider-next long-slider__next"></button>',
+
+  slidesToShow: 5,
+  slidesToScroll: 3,
+
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        // appendArrows: $('.long-slider__arrows'),
+        slidesToShow: 3,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        // appendArrows: $('.long-slider__arrows'),
+
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
+
+// = Plans Slider End =
+
 // Sliders End
+
+// === Magnific Popup Settings Start
+$('.gallery-slider__img-lg').magnificPopup({
+  type: 'image',
+  gallery: {
+    enabled: true,
+  },
+  fixedBgPos: true,
+  fixedContentPos: true,
+});
+// === Magnific Popup Settings End
