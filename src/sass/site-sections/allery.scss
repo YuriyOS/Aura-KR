@@ -89,3 +89,12 @@
 .l-block__img {
   max-width: 100%;
 }
+
+.long-slider__arrows,
+.gallery-slider__arrows {
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

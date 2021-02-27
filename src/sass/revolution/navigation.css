@@ -2148,7 +2148,7 @@ website:    http://www.themepunch.com
 	height:40px;
 	position:absolute;
 	display:block;
-	z-index:100;
+	z-index:90;
   border:1px solid #f5f5f5;
 }
 .persephone.tparrows:hover {

@@ -9,7 +9,9 @@
 }
 
 .header--dark {
-  background-color: #3f4342;
+  //background-color: #3f4342;
+  //background-color: #232324;
+  background-color: #2a2a2d;
   transition: 0.5s ease;
 }
 
@@ -80,9 +82,7 @@
 
 }
 
-.body--fixed {
-  overflow: hidden;
-}
+
 
 .burger {
   display: block;
@@ -168,7 +168,7 @@
   }
 
   &:hover {
-    color: red;
+    color: #65a0b3;
   }
 }
 

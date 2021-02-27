@@ -3,6 +3,14 @@
   position: relative;
 }
 
+.plans__long-slider {
+  margin-bottom: 30px;
+}
+
+.plans__h2 {
+  margin-bottom: 50px;
+}
+
 .plans__title {
   position: relative;
 
@@ -31,8 +39,8 @@
 .plans-slider__item {
   margin: 0px 10px;
   cursor: pointer;
-  border: 2px solid #c7a978;
-  background-color: #2a2a2d;
+  border: 1px solid #2a2a2d;
+  background-color: #f6f6f6;
 
   &:focus,
   &:hover {
@@ -62,7 +70,7 @@
 .plans__tech-info {
   padding: 5px;
   position: relative;
-  background-color: #c7a978;
+  background-color: #2a2a2d;
 
   &::after {
     content: '';
@@ -103,8 +111,8 @@
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  border: 2px solid #2a2a2d;
-  background-color: #fff;
+  border: 2px solid #c7a978;
+  background-color: #f6f6f6;
 
   @media (min-width: 576px) {
     width: 70%;
@@ -165,7 +173,7 @@
   display: block;
   max-width: 100%;
   max-height: 85vh;
-  border-bottom: 2px solid red;
+  //border-bottom: 2px solid red;
 
   @media (min-width: 768px) {
     border-bottom: none;
@@ -193,12 +201,12 @@
 
 .plans-info__value {
   margin: 0px;
-  color: red;
+  color: #65a0b3;
 }
-
-.plan-info__btn {
-  background-color: red;
-}
+//
+//.plan-info__btn {
+//  background-color: red;
+//}
 
 // === Discuss Details Form Start ===
 

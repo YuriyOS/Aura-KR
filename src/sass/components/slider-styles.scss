@@ -8,9 +8,11 @@
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+
+
+  //position: absolute; todo Использовалось для центрирование по центру фото, там где нужно - переписать стилями того слайдера для которого это нужно
+  //top: 50%;
+  //transform: translateY(-50%);
 
   &:focus {
     outline: none;
@@ -43,6 +45,60 @@
     outline: none;
   }
 }
+
+// ===== GENERAL Controls Center Start
+
+.dots-style-general button {
+  width: 10px;
+  flex: 0 0 10px;
+  height: 10px;
+  font-size: 0px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #f6f6f6;
+}
+
+.long-slider__dots button {
+  width: 10px;
+  flex: 0 0 10px;
+  height: 10px;
+  font-size: 0px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #f6f6f6;
+}
+
+
+.dots-style-general li[class='slick-active'] button {
+  background: #65a0b3;
+}
+
+.long-slider__dots li[class='slick-active'] button {
+  background: #65a0b3;
+}
+
+
+.long-slider__dots,
+.dots-style-general {
+  padding: 0px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0;
+  list-style: none;
+}
+
+.arrow-prev-general {
+  background: url('/images/slider-prev.png') 0 0 / 100% no-repeat;
+}
+
+.arrow-next-general {
+  background: url('/images/slider-next.png') 0 0 / 100% no-repeat;
+}
+// ==== Controls Center End
+
 
 // Dots Settings Start
 .dots-style {
