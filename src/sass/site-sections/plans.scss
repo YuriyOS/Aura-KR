@@ -1,14 +1,18 @@
 .plans {
-  padding-top: 80px;
+  padding: 80px 0;
   position: relative;
+  background-image: url("/images/dots-dark.png");
+  background-color: #2a2a2d;
+
 }
 
 .plans__long-slider {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .plans__h2 {
   margin-bottom: 50px;
+  color: white;
 }
 
 .plans__title {
@@ -39,13 +43,13 @@
 .plans-slider__item {
   margin: 0px 10px;
   cursor: pointer;
-  border: 1px solid #2a2a2d;
-  background-color: #f6f6f6;
+  //border: 1px solid white;
+  //background-color: #f6f6f6;
 
   &:focus,
   &:hover {
     .plans__tech-info {
-      background-color: #2a2a2d;
+      background-color: #c7a978;
     }
 
     .plans__drawing {
@@ -99,6 +103,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: #c7a978;
   z-index: 1000;
   overflow-y: auto;
 }
@@ -111,8 +116,10 @@
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  border: 2px solid #c7a978;
-  background-color: #f6f6f6;
+  border: 2px solid white;
+  //background-color: #f6f6f6;
+  background-image: url("/images/dots-dark.png");
+  background-color: #2a2a2d;
 
   @media (min-width: 576px) {
     width: 70%;
@@ -154,8 +161,8 @@
 }
 
 .plan-info {
+  margin: 0 auto 30px;
   max-width: 420px;
-  margin: 0 auto;
 
   @media (min-width: 768px) {
     margin: 0 auto;
@@ -163,9 +170,14 @@
   }
 }
 
+.plan-info__btn {
+  margin: 20px auto;
+}
+
 .plans-info__title {
+  margin: 0 0 20px!important;
   font-weight: 600;
-  color: #2a2a2d;
+  color: white;
 }
 
 .modal-dialog__plan-drawing {
@@ -190,18 +202,19 @@
   justify-content: space-between;
 }
 
-.plan-info__item--margin {
-  margin: 15px 0px;
-}
+//.plan-info__item--margin {
+//  margin: 15px 0px;
+//}
 
 .plans-info__name {
   margin: 0px;
-  color: #2a2a2d;
+  color: white;
 }
 
 .plans-info__value {
   margin: 0px;
   color: #65a0b3;
+  font-weight: bold;
 }
 //
 //.plan-info__btn {

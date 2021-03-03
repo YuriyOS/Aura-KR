@@ -10,7 +10,7 @@
 
 //= ../../node_modules/slick-carousel/slick/slick.min.js
 //= ../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js
-
+//= ../../node_modules/wowjs/dist/wow.min.js
 
 $(function() {
 
@@ -120,6 +120,16 @@ $(function() {
           speed: 2000,
           levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
         },
+
+
+        viewPort: {
+          enable: true,
+          outof: 'wait',
+          visible_area: '80%',
+          presize: true,
+        },
+
+
       });
     }
   }
@@ -180,17 +190,19 @@ $(function() {
 });
 
 // Sliders Start
-$('.classic-slider').slick({
+$('.flat-slider').slick({
   arrows: true,
   dots: true,
-  dotsClass: 'dots-style',
+  dotsClass: 'flat-slider__dots',
+  appendDots: $('.flat-slider__dots'),
+  appendArrows: $('.flat-slider__arrows'),
   slidesToShow: 1,
   slidesToScroll: 1,
 
   prevArrow:
-    '<button type="button" class="slider-control slider-prev"></button>',
+    '<button type="button" class="slider-control flat__prev"></button>',
   nextArrow:
-    '<button type="button" class="slider-control slider-next"></button>',
+    '<button type="button" class="slider-control flat__next"></button>',
 
   // responsive: [
   //   {
@@ -221,11 +233,11 @@ $('.gallery-slider').slick({
 
   prevArrow:
   // '<button type="button" class="slider-control slider-prev gallery-slider__prev"></button>',
-    '<button type="button" class="slider-control arrow-prev-general"></button>',
+    '<button type="button" class="slider-control flat__prev"></button>',
 
   nextArrow:
   // '<button type="button" class="slider-control slider-next gallery-slider__next"></button>',
-    '<button type="button" class="slider-control arrow-next-general"></button>',
+    '<button type="button" class="slider-control flat__next"></button>',
 
   responsive: [
     {
@@ -251,10 +263,10 @@ $('.long-slider').slick({
   // appendArrows: $('.long-slider__arrows'),
 
   prevArrow:
-    '<button type="button" class="slider-control slider-prev"></button>',
+    '<button type="button" class="plans__slider-control plans__prev"></button>',
 
   nextArrow:
-    '<button type="button" class="slider-control slider-next"></button>',
+    '<button type="button" class="plans__slider-control plans__next"></button>',
 
   slidesToShow: 5,
   slidesToScroll: 3,
@@ -559,7 +571,7 @@ let layoutData = {
     square: '29.93 м2',
     floor: '2 | 3',
     flat: '1',
-  }
+  },
 
   // H3 - 2 Floor End
 };
@@ -574,7 +586,7 @@ function setModalContent(sId, oData) {
   $('.plans-info__flat').html(oData[sId].flat);
 }
 
-$('.plans-slider__item').on('click', function (e) {
+$('.plans-slider__item').on('click', function(e) {
   $('body').addClass('body--fixed');
   $('.modal').fadeIn();
   setModalContent($(this).data('planId'), layoutData);
@@ -587,7 +599,7 @@ function hideModal() {
   $('.overlay').fadeOut();
 }
 
-$('.modal').on('click', function (e) {
+$('.modal').on('click', function(e) {
   if (
     !$(e.target).is('.modal-dialog') &&
     !$(e.target).closest('.modal-dialog').length
@@ -596,7 +608,39 @@ $('.modal').on('click', function (e) {
   }
 });
 
-$('.modal-dialog__close').on('click', function () {
+$('.modal-dialog__close').on('click', function() {
   hideModal();
 });
 // === Modal End ===
+
+// WOW Library Start
+let wow = new WOW(
+  {
+    boxClass: 'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset: 0,          // distance to the element when triggering the animation (default is 0)
+    mobile: true,       // trigger animations on mobile devices (default is true)
+    live: true,      // act on asynchronously loaded content (default is true)
+    //   callback:     function(box) {
+    //     // the callback is fired every time an animation is started
+    //     // the argument that is passed in is the DOM node being animated
+    //   },
+    //   scrollContainer: null // optional scroll container selector, otherwise use window
+  },
+);
+wow.init();
+// WOW Library End
+
+// Modal Infrastructure Start
+$('.js-infrastructure__link').on('click', function() {
+  $(this).data('infrastructure');
+  $(`#${$(this).data('infrastructure')}`).fadeIn().addClass('modal-open');
+  $('body').addClass('body--fixed');
+
+});
+
+$('.js-close').on('click', function() {
+  $('.modal-infrastructure').fadeOut().removeClass('modal-open');
+  $('body').removeClass('body--fixed');
+});
+// Modal Infrastructure End

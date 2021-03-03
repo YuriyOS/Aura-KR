@@ -1,18 +1,12 @@
 .slider-control {
-  //position: absolute;
   font-size: 0;
-  width: 18px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
   cursor: pointer;
   border: none;
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
-
-
-  //position: absolute; todo Использовалось для центрирование по центру фото, там где нужно - переписать стилями того слайдера для которого это нужно
-  //top: 50%;
-  //transform: translateY(-50%);
 
   &:focus {
     outline: none;
@@ -20,13 +14,9 @@
 }
 
 .slider-prev {
-  left: 10px;
-  background: url('/images/slider-prev.png') 0 0 / 100% no-repeat;
-  z-index: 1;
-
-  //@media (min-width: 768px) {
-  //  left: 30%;
-  //}
+  //left: 10px;
+  background: url('/images/arrow-left.png') 0 0 / 100% no-repeat;
+  //z-index: 1;
 
   &:focus {
     outline: none;
@@ -34,21 +24,93 @@
 }
 
 .slider-next {
-  right: 10px;
-  background: url('/images/slider-next.png') 0 0 / 100% no-repeat;
-
-  //@media (min-width: 768px) {
-  //  right: 30%;
-  //}
+  //right: 10px;
+  background: url('/images/arrow-right.png') 0 0 / 100% no-repeat;
 
   &:focus {
     outline: none;
   }
 }
 
-// ===== GENERAL Controls Center Start
+//  === Long Slider
 
-.dots-style-general button {
+.plans__slider-control {
+  font-size: 0;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.plans__prev {
+  left: 10px;
+  background: url('/images/arrow-left.png') 0 0 / 100% no-repeat;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.plans__next {
+  background: url('/images/arrow-right.png') 0 0 / 100% no-repeat;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.long-slider__dots {
+  width: 150px !important;
+}
+
+.long-slider__dots button {
+  width: 10px;
+  flex: 0 0 10px;
+  height: 10px;
+  font-size: 0px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.long-slider__dots li[class='slick-active'] button {
+  background: #c7a978;
+}
+
+.long-slider__arrows {
+  margin: 0 auto;
+  width: 350px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//  === Long Slider End
+
+// === Flat Slider Start ===
+.flat-slider__arrows {
+  margin: 0 auto;
+  width: 350px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flat-slider__dots {
+  width: 150px !important;
+}
+
+.flat-slider__dots button {
   width: 10px;
   flex: 0 0 10px;
   height: 10px;
@@ -59,7 +121,50 @@
   background-color: #f6f6f6;
 }
 
-.long-slider__dots button {
+.flat-slider__dots li[class='slick-active'] button {
+  background: #65a0b3;
+}
+
+.flat-slider__arrows {
+  margin: 0 auto;
+  width: 450px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flat-slider__dots {
+  padding: 0px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0;
+  list-style: none;
+
+}
+
+.flat__prev {
+  left: 10px;
+  background: url('/images/arrow-left-b.png') 0 0 / 100% no-repeat;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.flat__next {
+  background: url('/images/arrow-right-b.png') 0 0 / 100% no-repeat;
+
+  &:focus {
+    outline: none;
+  }
+}
+//=== Flat Slider End ===
+
+// ===== GENERAL Controls Center Start
+
+.dots-style-general button {
   width: 10px;
   flex: 0 0 10px;
   height: 10px;
@@ -75,15 +180,12 @@
   background: #65a0b3;
 }
 
-.long-slider__dots li[class='slick-active'] button {
-  background: #65a0b3;
-}
-
 
 .long-slider__dots,
 .dots-style-general {
   padding: 0px;
   width: 200px;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 0;
@@ -97,6 +199,7 @@
 .arrow-next-general {
   background: url('/images/slider-next.png') 0 0 / 100% no-repeat;
 }
+
 // ==== Controls Center End
 
 
@@ -133,6 +236,7 @@
 .dots-style li[class='slick-active'] button {
   background: #65a0b3;
 }
+
 // Dots Settings End
 
 // Gallery Slider Start
@@ -203,6 +307,8 @@
     right: 10%;
   }
 }
+
+
 // Gallery Slider End
 
 // Plans Slider Start
