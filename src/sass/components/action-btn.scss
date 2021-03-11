@@ -1,15 +1,16 @@
 .action-btn {
   padding: 5px 10px;
   width: 280px;
+  max-width: 100%;
   min-height: 60px;
   text-transform: uppercase;
-  //text-align: left;
   text-align: center;
   font-weight: bold;
   line-height: 1.2;
-  //color: white;
-  //background-color: #65a0b3;
-  border: 2px solid #c7a978;
+  color: white;
+  background-color: #65a0b3;
+  //border: 2px solid #c7a978;
+  border: 2px solid white;
   cursor: pointer;
   outline: none;
 

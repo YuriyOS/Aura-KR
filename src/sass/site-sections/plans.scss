@@ -6,21 +6,13 @@
 
 }
 
-.plans__long-slider {
-  margin-bottom: 50px;
-}
+//.plans-slider {
+//  margin-bottom: 50px;
+//}
 
 .plans__h2 {
   margin-bottom: 50px;
   color: white;
-}
-
-.plans__title {
-  position: relative;
-
-  span {
-    color: red;
-  }
 }
 
 .arrows-position {
@@ -31,7 +23,7 @@
 }
 
 .plans-slider {
-  margin: 0 auto;
+  margin: 0 auto 50px;
   width: 420px;
   max-width: 100%;
   font-weight: normal;
@@ -103,7 +95,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #c7a978;
+  //background-color: #f6f6f6;
+  background-color: rgba(246, 246, 246, .95);
   z-index: 1000;
   overflow-y: auto;
 }
@@ -185,7 +178,6 @@
   display: block;
   max-width: 100%;
   max-height: 85vh;
-  //border-bottom: 2px solid red;
 
   @media (min-width: 768px) {
     border-bottom: none;
@@ -202,10 +194,6 @@
   justify-content: space-between;
 }
 
-//.plan-info__item--margin {
-//  margin: 15px 0px;
-//}
-
 .plans-info__name {
   margin: 0px;
   color: white;
@@ -213,13 +201,9 @@
 
 .plans-info__value {
   margin: 0px;
-  color: #65a0b3;
+  color: #FFFFFF;
   font-weight: bold;
 }
-//
-//.plan-info__btn {
-//  background-color: red;
-//}
 
 // === Discuss Details Form Start ===
 
@@ -238,6 +222,7 @@
 .details-form--visible {
   bottom: 0;
   transition: 0.5s ease all;
+  z-index: 1100;
 }
 
 .details-form__form {
@@ -252,6 +237,7 @@
   max-width: 100%;
   height: auto;
   text-align: center;
+  line-height: 1.5;
 }
 
 .action-box__title--color,
@@ -274,12 +260,14 @@
   top: 5%;
   right: 5%;
   cursor: pointer;
+  border: 1px solid #FFFFFF;
+  background-color: #2a2a2d;
 }
 
 .close-btn {
   width: 50px;
   height: 2px;
-  background-color: #fff;
+  background-color: #c7a978;
   transform: rotate(45deg);
 
   &::before {
@@ -287,7 +275,7 @@
     display: block;
     width: 50px;
     height: 2px;
-    background-color: #fff;
+    background-color: #c7a978;
     transform: rotate(-90deg);
   }
 }

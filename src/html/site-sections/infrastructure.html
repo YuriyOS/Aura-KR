@@ -7,9 +7,9 @@
         <a class='infrastructure__link js-infrastructure__link' href='javascript:void(0)' data-infrastructure='school'>
           <div class='hexagon'>
             <img src='/images/infrastructure/school.jpg' alt=''>
-<!--            <svg class='infrastructure__icon'>-->
-<!--              <use href='/images/icons-defs.svg#school'></use>-->
-<!--            </svg>-->
+            <svg class='infrastructure__icon'>
+              <use href='/images/icons-defs.svg#right-arrow'></use>
+            </svg>
 
           </div>
           <div class='info'>
@@ -18,54 +18,72 @@
         </a>
       </li>
       <li class='item wow rollIn' data-wow-delay='0.25s'>
-        <div class='hexagon'>
-          <img src='/images/infrastructure/school.jpg' alt=''>
+        <a class='infrastructure__link js-infrastructure__link' href='javascript:void(0)' data-infrastructure='shops'>
+          <div class='hexagon'>
+            <img src='/images/infrastructure/shopping.jpg' alt=''>
 
-          <svg class='infrastructure__icon'>
-            <use href='/images/icons-defs.svg#shopping'></use>
-          </svg>
+            <svg class='infrastructure__icon'>
+              <use href='/images/icons-defs.svg#right-arrow'></use>
+            </svg>
 
-        </div>
-        <div class='info'>
-          <h4 class='info__title info__title--color'>ТРЦ <br> & <br> Магазини</h4>
-        </div>
+          </div>
+          <div class='info'>
+            <h4 class='info__title info__title--color'>ТРЦ <br> & <br> Магазини</h4>
+          </div>
+        </a>
       </li>
       <li class='item wow rollIn' data-wow-delay='0.35s'>
-        <div class='hexagon'>
-          <svg class='infrastructure__icon'>
-            <use href='/images/icons-defs.svg#cafe'></use>
-          </svg>
+        <a class='infrastructure__link js-infrastructure__link' href='javascript:void(0)'
+           data-infrastructure='restaurants'>
+          <div class='hexagon'>
+            <img src='/images/infrastructure/restaurant.jpg' alt=''>
 
-        </div>
-        <div class='info'>
-          <h4 class='info__title'>Кафе <br> & <br> Ресторани</h4>
-        </div>
+            <svg class='infrastructure__icon'>
+              <use href='/images/icons-defs.svg#right-arrow'></use>
+            </svg>
+
+          </div>
+          <div class='info'>
+            <h4 class='info__title'>Кафе <br> & <br> Ресторани</h4>
+          </div>
+        </a>
       </li>
       <li class='item wow rollIn' data-wow-delay='0.45s'>
-        <div class='hexagon'>
-          <svg class='infrastructure__icon'>
-            <use href='/images/icons-defs.svg#beauty'></use>
-          </svg>
+        <a class='infrastructure__link js-infrastructure__link' href='javascript:void(0)' data-infrastructure='beauty'>
+          <div class='hexagon'>
+            <img src='/images/infrastructure/relax.jpg' alt=''>
 
-        </div>
-        <div class='info'>
-          <h4 class='info__title'>Краса <br> & <br> Медецина</h4>
-        </div>
+            <svg class='infrastructure__icon'>
+              <use href='/images/icons-defs.svg#right-arrow'></use>
+            </svg>
+
+          </div>
+          <div class='info'>
+            <h4 class='info__title info__title--color'>Краса <br> & <br> Медецина</h4>
+          </div>
+        </a>
       </li>
       <li class='item wow rollIn' data-wow-delay='0.6s'>
-        <div class='hexagon'>
-          <svg class='infrastructure__icon'>
-            <use href='/images/icons-defs.svg#sport'></use>
-          </svg>
+        <a class='infrastructure__link js-infrastructure__link' href='javascript:void(0)'
+           data-infrastructure='relaxation'>
+          <div class='hexagon'>
+            <img src='/images/infrastructure/sport.jpg' alt=''>
 
-        </div>
-        <div class='info'>
-          <h4 class='info__title'>Відпочинок <br> & <br> Спорт</h4>
-        </div>
+            <svg class='infrastructure__icon'>
+              <use href='/images/icons-defs.svg#right-arrow'></use>
+            </svg>
+
+          </div>
+          <div class='info'>
+            <h4 class='info__title'>Відпочинок <br> & <br> Спорт</h4>
+          </div>
+        </a>
       </li>
     </ul>
   </div>
 </section>
+
+<!-- Infrastructure Dialogs Start-->
 
 <div class='modal-infrastructure' id='school'>
   <div class='close-btn-wrap js-close'>
@@ -74,15 +92,175 @@
 
   <div class='container'>
     <div class='modal-infrastructure__content'>
-      <h3 class='h3'>Школи</h3>
+      <h3 class='h3 modal-infrastructure__heading'>Освіта & Дитячи садки</h3>
 
-      <img class='modal-infrastructure__img' src='/images/infrastructure/intergal.jpg' alt=''>
-      <div class='plans__tech-info'>
-        <p class='tst'>School</p>
+      <ul class='modal-infrastructure__list'>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='/images/infrastructure/school/4child.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Дитячий садок "4CHILD"</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='/images/infrastructure/school/intergal.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Integral School - приватна дитяча школа</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-      </div>
+<div class='modal-infrastructure' id='shops'>
+  <div class='close-btn-wrap js-close'>
+    <div class='close-btn'></div>
+  </div>
+
+  <div class='container'>
+
+    <div class='modal-infrastructure__content'>
+      <h3 class='h3 modal-infrastructure__heading'>ТРЦ & Магазини</h3>
+
+      <ul class='modal-infrastructure__list'>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/nebo.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>ТРЦ Nebo</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/novus.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Мережа магазинів "NOVUS"</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/fora.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Мережа магазинів "ФОРА"</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'><img class='modal-infrastructure__img'
+                                                    src='images/infrastructure/shops/lotok.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Мережа магазинів "ЛОТОК"</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class='modal-infrastructure' id='restaurants'>
+  <div class='close-btn-wrap js-close'>
+    <div class='close-btn'></div>
+  </div>
+
+  <div class='container'>
+
+    <div class='modal-infrastructure__content'>
+      <h3 class='h3 modal-infrastructure__heading'>Кафе & Ресторани</h3>
+
+      <ul class='modal-infrastructure__list'>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/nebo.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>ТРЦ Nebo</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/novus.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Мережа магазинів "NOVUS"</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/fora.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Мережа магазинів "ФОРА"</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/lotok.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Мережа магазинів "ЛОТОК"</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class='modal-infrastructure' id='beauty'>
+  <div class='close-btn-wrap js-close'>
+    <div class='close-btn'></div>
+  </div>
+
+  <div class='container'>
+
+    <div class='modal-infrastructure__content'>
+      <h3 class='h3 modal-infrastructure__heading'>Краса & Медецина</h3>
+
+      <ul class='modal-infrastructure__list'>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/beauty/xameleon.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Салон краси "Хамелеон"</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='/images/infrastructure/beauty/ami-clinic.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>AMI Clinic</p>
+          </div>
+        </li>
+      </ul>
+
 
     </div>
   </div>
 </div>
 
+<div class='modal-infrastructure' id='relaxation'>
+  <div class='close-btn-wrap js-close'>
+    <div class='close-btn'></div>
+  </div>
+
+  <div class='container'>
+
+    <div class='modal-infrastructure__content'>
+      <h3 class='h3 modal-infrastructure__heading'>Відпочинок & Спорт</h3>
+
+      <ul class='modal-infrastructure__list'>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/nebo.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>ТРЦ Nebo</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/novus.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Мережа магазинів "NOVUS"</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/fora.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Мережа магазинів "ФОРА"</p>
+          </div>
+        </li>
+        <li class='modal-infrastructure__item'>
+          <img class='modal-infrastructure__img' src='images/infrastructure/shops/lotok.jpg' alt=''>
+          <div class='plans__tech-info'>
+            <p>Мережа магазинів "ЛОТОК"</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- Infrastructure Dialogs End-->

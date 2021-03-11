@@ -1,4 +1,6 @@
 //= ../../node_modules/jquery/dist/jquery.min.js
+//=../../node_modules/jquery-validation/dist/jquery.validate.min.js
+
 
 //= ./revolution/jquery.themepunch.tools.min.js
 //= ./revolution/jquery.themepunch.revolution.min.js
@@ -136,7 +138,7 @@ $(function() {
 
   photography_slider();
 
-// Mobile Menu
+// Mobile Menu Start
 
   $('.js-menu-btn--open').on('click', function() {
     $('.menu').addClass('menu--visible');
@@ -185,462 +187,400 @@ $(function() {
     addHeaderBackground();
   });
 
-  //==
   // Mobile Menu End
-});
+
 
 // Sliders Start
-$('.flat-slider').slick({
-  arrows: true,
-  dots: true,
-  dotsClass: 'flat-slider__dots',
-  appendDots: $('.flat-slider__dots'),
-  appendArrows: $('.flat-slider__arrows'),
-  slidesToShow: 1,
-  slidesToScroll: 1,
 
-  prevArrow:
-    '<button type="button" class="slider-control flat__prev"></button>',
-  nextArrow:
-    '<button type="button" class="slider-control flat__next"></button>',
+//  FLAT SLIDER START
+  $('.flat-slider').slick({
+    arrows: true,
+    dots: true,
+    dotsClass: 'flat-slider-dots',
+    appendDots: $('.flat-dots-container'),
+    appendArrows: $('.flat-slider-arrows'),
+    slidesToShow: 1,
+    slidesToScroll: 1,
 
-  // responsive: [
-  //   {
-  //     breakpoint: 992,
-  //     settings: {
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  // ],
-});
+    // nextArrow: $('.flat-arrow-right'),
+    nextArrow: '<button type="button" class="slider-control flat-arrow-right"></button>',
 
-$('.gallery-slider').slick({
-  arrows: true,
-  dots: true,
-  dotsClass: 'dots-style-general',
-  appendDots: $('.dots-style-general'),
-  appendArrows: $('.gallery-slider__arrows'),
+    // prevArrow: $('.flat-arrow-left'),
+    prevArrow:
+      '<button type="button" class="slider-control flat-arrow-left"></button>',
+  });
+
+//  GALLERY SLIDER START
+  $('.gallery-slider').slick({
+    arrows: true,
+    dots: true,
+    dotsClass: 'gallery-slider-dots',
+    appendDots: $('.gallery-dots-container'),
+    appendArrows: $('.gallery-slider-arrows'),
 
 
-  // dotsClass: 'card-slider__dots view-slider__dots',
+    centerMode: true,
+    variableWidth: true,
 
-  centerMode: true,
-  variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
 
-  slidesToShow: 1,
-  slidesToScroll: 1,
 
-  prevArrow:
-  // '<button type="button" class="slider-control slider-prev gallery-slider__prev"></button>',
-    '<button type="button" class="slider-control flat__prev"></button>',
+    // nextArrow: $('.gallery-arrow-right'),
+    nextArrow: '<button type="button" class="slider-control gallery-arrow-right"></button>',
 
-  nextArrow:
-  // '<button type="button" class="slider-control slider-next gallery-slider__next"></button>',
-    '<button type="button" class="slider-control flat__next"></button>',
+    // prevArrow: $('.gallery-arrow-left'),
+    prevArrow:
+      '<button type="button" class="slider-control gallery-arrow-left"></button>',
 
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: false,
-        variableWidth: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
+        },
       },
-    },
-  ],
-});
+    ],
+  });
 
-// = Plans Slider Start =
-$('.long-slider').slick({
-  arrows: true,
-  dots: true,
-  dotsClass: 'long-slider__dots',
-  appendDots: $('.long-slider__dots'),
-  appendArrows: $('.long-slider__arrows'),
-  // dotsClass: 'dots-style',
-  // appendArrows: $('.long-slider__arrows'),
+// PLANS SLIDER START
+  $('.plans-slider').slick({
+    arrows: true,
+    dots: true,
+    dotsClass: 'plan-slider-dots',
+    appendDots: $('.plan-dots-container'),
+    appendArrows: $('.plan-slider-arrows'),
 
-  prevArrow:
-    '<button type="button" class="plans__slider-control plans__prev"></button>',
+    nextArrow: $('.plan-arrow-right'),
+    nextArrow: '<button type="button" class="slider-control plan-arrow-right"></button>',
 
-  nextArrow:
-    '<button type="button" class="plans__slider-control plans__next"></button>',
+    prevArrow: $('.plan-arrow-left'),
+    prevArrow:
+      '<button type="button" class="slider-control plan-arrow-left"></button>',
 
-  slidesToShow: 5,
-  slidesToScroll: 3,
+    slidesToShow: 5,
+    slidesToScroll: 3,
 
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        // appendArrows: $('.long-slider__arrows'),
-        slidesToShow: 3,
-        slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
       },
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        // appendArrows: $('.long-slider__arrows'),
-
-        slidesToShow: 2,
-        slidesToScroll: 2,
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
       },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
-    },
-  ],
-});
-
-// = Plans Slider End =
+    ],
+  });
 
 // Sliders End
 
 // === Magnific Popup Settings Start
-$('.gallery-slider__img-lg').magnificPopup({
-  type: 'image',
-  gallery: {
-    enabled: true,
-  },
-  fixedBgPos: true,
-  fixedContentPos: true,
-});
+  $('.gallery-slider__img-lg').magnificPopup({
+    type: 'image',
+    gallery: {
+      enabled: true,
+    },
+    fixedBgPos: true,
+    fixedContentPos: true,
+  });
 
-$('.classic-slider__img-lg').magnificPopup({
-  type: 'image',
-  gallery: {
-    enabled: true,
-  },
-  fixedBgPos: true,
-  fixedContentPos: true,
-});
+  $('.classic-slider__img-lg').magnificPopup({
+    type: 'image',
+    gallery: {
+      enabled: true,
+    },
+    fixedBgPos: true,
+    fixedContentPos: true,
+  });
 // === Magnific Popup Settings End
 
 
 // === Plans Objects Start ===
 
-let layoutData = {
-  // 0 Floor
-  // '0e': {
-  //   image: '/images/plans/0/0E@2x.jpg',
-  //   title: 'Однокімнатна 0E',
-  //   square: '23.06',
-  //   floor: '0',
-  //   flat: '1',
-  // },
-  '0d': {
-    image: '/images/plans/1@2x.png',
-    title: 'Однокімнатна 0D',
-    square: '27.29',
-    floor: '1',
-    flat: '1',
-  },
-  '0f': {
-    image: '/images/plans/1@2x.png',
-    title: 'Однокімнатна 0F',
-    square: '27.58',
-    floor: '1',
-    flat: '1',
-  },
-  '0a': {
-    image: '/images/plans/1@2x.png',
-    title: 'Однокімнатна 0A',
-    square: '33.5',
-    floor: '1',
-    flat: '1',
-  },
-  '0g': {
-    image: '/images/plans/1@2x.png',
-    title: 'Однокімнатна 0G',
-    square: '37.97',
-    floor: '1',
-    flat: '1',
-  },
-  '0j': {
-    image: '/images/plans/1@2x.png',
-    title: 'Однокімнатна 0J',
-    square: '44.53',
-    floor: '1',
-    flat: '1',
-  },
-  '0k': {
-    image: '/images/plans/1@2x.png',
-    title: 'Двокімнатна 0K',
-    square: '49.79',
-    floor: '1',
-    flat: '2',
-  },
+  let layoutData = {
 
-  // 1 Floor
-  '1j': {
-    image: '/images/plans/1@2x.png',
-    title: 'Двокімнатна 1J',
-    square: '56.23',
-    floor: '1',
-    flat: '2',
-  },
-  '1i': {
-    image: '/images/plans/1@2x.png',
-    title: 'Двокімнатна 1I',
-    square: '56.35',
-    floor: '1',
-    flat: '2',
-  },
-  '1c': {
-    image: '/images/plans/1@2x.png',
-    title: 'Двокімнатна 1C',
-    square: '61.71',
-    floor: '1',
-    flat: '2',
-  },
-  '1d': {
-    image: '/images/plans/1@2x.png',
-    title: 'Двокімнатна 1D',
-    square: '62.54',
-    floor: '1',
-    flat: '2',
-  },
-  '1m': {
-    image: '/images/plans/1@2x.png',
-    title: 'Двокімнатна 1M',
-    square: '76.64',
-    floor: '1',
-    flat: '3',
-  },
-  '1k': {
-    image: '/images/plans/1@2x.png',
-    title: 'Дворівнева 1K',
-    square: '95.50',
-    floor: '1',
-    flat: '3',
-  },
-  '1l': {
-    image: '/images/plans/1@2x.png',
-    title: 'Дворівнева 1L',
-    square: '108.94',
-    floor: '1',
-    flat: '4',
-  },
+    '1a': {
+      image: '/images/plans/1@2x.png',
+      title: 'Однокімнатна 1A',
+      square: '26.39',
+      floor: '1 - 5',
+      flat: '1',
+      price: '20 000$',
+    },
 
-  // 2 Floor
+    '1b': {
+      image: '/images/plans/2@2x.png',
+      title: 'Однокімнатна 1B',
+      square: '21.75',
+      floor: '1 - 5',
+      flat: '1',
+      price: '20 000$',
+    },
 
-  '2p': {
-    image: '/images/plans/2/2P@2x.jpg',
-    title: 'Студія 2P',
-    square: '30.12',
-    floor: '2',
-    flat: '1',
-  },
-  '2f': {
-    image: '/images/plans/2/2F@2x.jpg',
-    title: 'Студія 2F',
-    square: '37.26',
-    floor: '2',
-    flat: '1',
-  },
-  '2j': {
-    image: '/images/plans/2/2J@2x.jpg',
-    title: 'Однокімнатна 2J',
-    square: '34.87',
-    floor: '2',
-    flat: '1',
-  },
-  '2k': {
-    image: '/images/plans/2/2K@2x.jpg',
-    title: 'Однокімнатна 2K',
-    square: '60.5',
-    floor: '2',
-    flat: '1',
-  },
-  '2l': {
-    image: '/images/plans/2/2L@2x.jpg',
-    title: 'Двокімнатна 2L',
-    square: '63.33',
-    floor: '2',
-    flat: '2',
-  },
-  // 3 Floor
-  '3n': {
-    image: '/images/plans/3/3N@2x.jpg',
-    title: 'Студія 3N',
-    square: '26.33',
-    floor: '3',
-    flat: '1',
-  },
-  // 3 Floor End
+    '1c': {
+      image: '/images/plans/3@2x.png',
+      title: 'Однокімнатна 1C',
+      square: '21.71',
+      floor: '1 - 5',
+      flat: '1',
+      price: '20 000$',
+    },
 
-  // === House 3 - 2 Floor Start ===
-  'h3-2a': {
-    image: '/images/plans/house-3/2/2a@2x.jpg',
-    title: 'Студія 2A | 3A',
-    square: '34.09',
-    floor: '2 | 3',
-    flat: '1',
-  },
+    '1d': {
+      image: '/images/plans/4@2x.png',
+      title: 'Однокімнатна 1D',
+      square: '28.38',
+      floor: '1 - 5',
+      flat: '1',
+      price: '20 000$',
+    },
 
-  'h3-2b': {
-    image: '/images/plans/house-3/2/2b@2x.jpg',
-    title: 'Однокімнатна 2B | 3B',
-    square: '34.09 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
+    '1e': {
+      image: '/images/plans/5@2x.png',
+      title: 'Однокімнатна 1E',
+      square: '31.37',
+      floor: '1 - 5',
+      flat: '1',
+      price: '20 000$',
+    },
 
-  'h3-2c': {
-    image: '/images/plans/house-3/2/2c@2x.jpg',
-    title: 'Однокімнатна 2C | 3C',
-    square: '34.57 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
+    '1f': {
+      image: '/images/plans/6@2x.png',
+      title: 'Однокімнатна 1F',
+      square: '19.4',
+      floor: '1 - 5',
+      flat: '1',
+      price: '20 000$',
+    },
 
-  'h3-2d': {
-    image: '/images/plans/house-3/2/2d@2x.jpg',
-    title: 'Однокімнатна 2D | 3D',
-    square: '38.86 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
+    '1g': {
+      image: '/images/plans/7@2x.png',
+      title: 'Однокімнатна 1G',
+      square: '26.67',
+      floor: '1 - 5',
+      flat: '1',
+      price: '20 000$',
+    },
 
-  'h3-2e': {
-    image: '/images/plans/house-3/2/2e@2x.jpg',
-    title: 'Однокімнатна 2E | 3E',
-    square: '34.09 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
+    '2a': {
+      image: '/images/plans/2a@2x.png',
+      title: 'Однокімнатна 2A',
+      square: '28.4',
+      floor: '1 - 5',
+      flat: '1',
+      price: '20 000$',
+    },
 
-  'h3-2f': {
-    image: '/images/plans/house-3/2/2f@2x.jpg',
-    title: 'Однокімнатна 2F | 3F',
-    square: '32.62 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
+    '2b': {
+      image: '/images/plans/2b@2x.png',
+      title: 'Однокімнатна 2B',
+      square: '20',
+      floor: '1 - 5',
+      flat: '1',
+      price: '20 000$',
+    },
 
-  'h3-2g': {
-    image: '/images/plans/house-3/2/2g@2x.jpg',
-    title: 'Однокімнатна 2G | 3G',
-    square: '32.02 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
-
-  'h3-2h': {
-    image: '/images/plans/house-3/2/2h@2x.jpg',
-    title: 'Однокімнатна 2H | 3H',
-    square: '29.93 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
-
-  'h3-2i': {
-    image: '/images/plans/house-3/2/2i@2x.jpg',
-    title: 'Однокімнатна 2I | 3I',
-    square: '32.62 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
-
-  'h3-2j': {
-    image: '/images/plans/house-3/2/2j@2x.jpg',
-    title: 'Однокімнатна 2J | 3J',
-    square: '38.86 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
-
-  'h3-2k': {
-    image: '/images/plans/house-3/2/2k@2x.jpg',
-    title: 'Однокімнатна 2K | 3K',
-    square: '54.77 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
-
-  'h3-2l': {
-    image: '/images/plans/house-3/2/2l@2x.jpg',
-    title: 'Студія 2L | 3L',
-    square: '29.93 м2',
-    floor: '2 | 3',
-    flat: '1',
-  },
-
-  // H3 - 2 Floor End
-};
+  };
 // === Plans Objects End ===
 
 // === Modal Start ===
-function setModalContent(sId, oData) {
-  $('.modal-dialog__plan-drawing').attr('src', oData[sId].image);
-  $('.plans-info__title').html(oData[sId].title);
-  $('.plans-info__square').html(oData[sId].square);
-  $('.plans-info__floor').html(oData[sId].floor);
-  $('.plans-info__flat').html(oData[sId].flat);
-}
-
-$('.plans-slider__item').on('click', function(e) {
-  $('body').addClass('body--fixed');
-  $('.modal').fadeIn();
-  setModalContent($(this).data('planId'), layoutData);
-  $('.overlay').fadeIn();
-});
-
-function hideModal() {
-  $('body').removeClass('body--fixed');
-  $('.modal').fadeOut();
-  $('.overlay').fadeOut();
-}
-
-$('.modal').on('click', function(e) {
-  if (
-    !$(e.target).is('.modal-dialog') &&
-    !$(e.target).closest('.modal-dialog').length
-  ) {
-    hideModal();
+  function setModalContent(sId, oData) {
+    $('.modal-dialog__plan-drawing').attr('src', oData[sId].image);
+    $('.plans-info__title').html(oData[sId].title);
+    $('.plans-info__square').html(oData[sId].square);
+    $('.plans-info__floor').html(oData[sId].floor);
+    $('.plans-info__flat').html(oData[sId].flat);
+    $('.plans-info__price').html(oData[sId].price);
   }
-});
 
-$('.modal-dialog__close').on('click', function() {
-  hideModal();
-});
+  $('.plans-slider__item').on('click', function(e) {
+    $('body').addClass('body--fixed');
+    $('.modal').fadeIn();
+    setModalContent($(this).data('planId'), layoutData);
+    $('.overlay').fadeIn();
+  });
+
+  function hideModal() {
+    $('body').removeClass('body--fixed');
+    $('.modal').fadeOut();
+    $('.overlay').fadeOut();
+  }
+
+  $('.modal').on('click', function(e) {
+    if (
+      !$(e.target).is('.modal-dialog') &&
+      !$(e.target).closest('.modal-dialog').length
+    ) {
+      hideModal();
+    }
+  });
+
+  $('.modal-dialog__close').on('click', function() {
+    hideModal();
+  });
 // === Modal End ===
 
 // WOW Library Start
-let wow = new WOW(
-  {
-    boxClass: 'wow',      // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset: 0,          // distance to the element when triggering the animation (default is 0)
-    mobile: true,       // trigger animations on mobile devices (default is true)
-    live: true,      // act on asynchronously loaded content (default is true)
-    //   callback:     function(box) {
-    //     // the callback is fired every time an animation is started
-    //     // the argument that is passed in is the DOM node being animated
-    //   },
-    //   scrollContainer: null // optional scroll container selector, otherwise use window
-  },
-);
-wow.init();
+  let wow = new WOW(
+    {
+      boxClass: 'wow',      // animated element css class (default is wow)
+      animateClass: 'animated', // animation css class (default is animated)
+      offset: 0,          // distance to the element when triggering the animation (default is 0)
+      mobile: true,       // trigger animations on mobile devices (default is true)
+      live: true,      // act on asynchronously loaded content (default is true)
+      //   callback:     function(box) {
+      //     // the callback is fired every time an animation is started
+      //     // the argument that is passed in is the DOM node being animated
+      //   },
+      //   scrollContainer: null // optional scroll container selector, otherwise use window
+    },
+  );
+  wow.init();
 // WOW Library End
 
 // Modal Infrastructure Start
-$('.js-infrastructure__link').on('click', function() {
-  $(this).data('infrastructure');
-  $(`#${$(this).data('infrastructure')}`).fadeIn().addClass('modal-open');
-  $('body').addClass('body--fixed');
+  $('.js-infrastructure__link').on('click', function() {
+    $(this).data('infrastructure');
+    $(`#${$(this).data('infrastructure')}`).fadeIn().addClass('modal-open');
+    $('body').addClass('body--fixed');
 
-});
 
-$('.js-close').on('click', function() {
-  $('.modal-infrastructure').fadeOut().removeClass('modal-open');
-  $('body').removeClass('body--fixed');
-});
+
+  });
+
+  $('.js-close').on('click', function() {
+    $('.modal-infrastructure').fadeOut().removeClass('modal-open');
+    $('body').removeClass('body--fixed');
+  });
 // Modal Infrastructure End
+
+
+  // === Forms Settings Start ===
+
+  //Form Action Start
+
+  function createModal() {
+    $('body').prepend(
+      '' +
+      '<div class="modal modal-apply">\n' +
+      '    <div class="modal__dialog">\n' +
+      '        <div class="modal__body">\n' +
+      '        <div class="btn-close"></div>\n' +
+      '        <div class="js-modal-content">\n' +
+      '        <h3 class="form__title">Заповніть форму нижче! <br> Ми зв\'яжемося з Вами, відповімо на всі питання та підберемо зручний час перегляду.</h3>' +
+      '        <form class="form modal__form" id="view">        \n' +
+      '            <input class="input modal__input" type="text" name="name" placeholder="Ваше ім\'я..." required><br>\n' +
+      '            <input class="input modal__input" type="tel" name="phone" placeholder="Ваш телефон..."><br>\n' +
+      '            <button type="submit"  class="action-btn form__action-btn"> Хочу на перегляд</button>\n' +
+      '        </form>\n' +
+      '        </div>\n' +
+      '        </div>\n' +
+      '        <div class="modal__footer">\n' +
+      '        <p class="modal__footnote main-text_white">Ваші дані в цілковитій безпеці і ніколи НЕ будуть передані 3-м особам.</p>\n' +
+      '        </div>\n' +
+      '    </div>\n' +
+      '</div>',
+    );
+  }
+
+
+  $('.js-action__btn').on('click', function(e) {
+
+    createModal();
+    validateForm('#view');
+
+
+    $('.modal-apply').fadeIn();
+    $('body').addClass('body_fixed');
+    $('.modal-apply').on('click', function(e) {
+      if (
+        !$(e.target).closest('.modal__dialog').length &&
+        !$(e.target).is('.modal__dialog')
+      ) {
+        $('.modal-apply').fadeOut();
+        $('.overlay').remove();
+        $('.modal-apply').remove();
+        $('body').removeClass('body_fixed');
+      }
+    });
+
+    $('.btn-close').on('click', function() {
+      $('.modal-apply').fadeOut();
+      $('.overlay').remove();
+      $('.modal-apply').remove();
+      $('body').removeClass('body_fixed');
+    });
+
+
+  });
+
+  //Form Action End
+
+  // = Forms Validation Start =
+
+  function validateForm(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+        },
+        phone: {
+          required: true,
+        },
+      },
+
+      messages: {
+        name: 'Будь ласка, введіть Ваше ім\'я',
+        phone: 'Будь ласка, введіть Ваш номер телефону',
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: 'POST',
+          url: 'php-mailer/mail.php',
+          data: $(form).serialize(),
+          success: function() {
+            window.location.href = '/thanks.html';
+          },
+          error: function(err) {
+            console.log('Error: ', err);
+          },
+        });
+      },
+    });
+  }
+
+  // = Forms Validation End =
+
+  // = More Details Form Start =
+
+  $('.js-plan-info__btn').on('click', function () {
+    $('.details-form').toggleClass('details-form--visible');
+    validateForm('#details');
+
+  });
+
+  $('.js-details-close').on('click', function () {
+    $('.details-form').removeClass('details-form--visible');
+  });
+
+  // = More Details Form End =
+
+  // === Forms Settings End ===
+});
