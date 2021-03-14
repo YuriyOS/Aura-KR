@@ -49,20 +49,22 @@
     width: 19%;
   }
 
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
 
-    .info {
-      background-color: #65a0b3;
-    }
+      .info {
+        background-color: #65a0b3;
+      }
 
-    .infrastructure__icon {
-      fill: white;
-    }
+      .infrastructure__icon {
+        fill: white;
+      }
 
-    .info__title {
-      color: white;
+      .info__title {
+        color: white;
+      }
     }
   }
 }

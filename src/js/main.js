@@ -16,8 +16,7 @@
 
 $(function() {
 
-  // $('#home_full_slider').show().revolution();
-
+  // Revolution Slider Start
   function photography_slider() {
     if ($('#home_full_slider').length) {
       $('#home_full_slider').revolution({
@@ -137,6 +136,7 @@ $(function() {
   }
 
   photography_slider();
+  // Revolution Slider End
 
 // Mobile Menu Start
 
@@ -155,7 +155,7 @@ $(function() {
     hideMenu();
   });
 
-  $('.navigation__link').on('click', function(e) {
+  $('.menu__link').on('click', function(e) {
     if ($(this.hash).length) {
       e.preventDefault();
       hideMenu();
@@ -254,10 +254,10 @@ $(function() {
     appendDots: $('.plan-dots-container'),
     appendArrows: $('.plan-slider-arrows'),
 
-    nextArrow: $('.plan-arrow-right'),
+    // nextArrow: $('.plan-arrow-right'),
     nextArrow: '<button type="button" class="slider-control plan-arrow-right"></button>',
 
-    prevArrow: $('.plan-arrow-left'),
+    // prevArrow: $('.plan-arrow-left'),
     prevArrow:
       '<button type="button" class="slider-control plan-arrow-left"></button>',
 
@@ -322,7 +322,7 @@ $(function() {
       square: '26.39',
       floor: '1 - 5',
       flat: '1',
-      price: '20 000$',
+      price: '16495$',
     },
 
     '1b': {
@@ -462,7 +462,6 @@ $(function() {
     $('body').addClass('body--fixed');
 
 
-
   });
 
   $('.js-close').on('click', function() {
@@ -488,6 +487,7 @@ $(function() {
       '        <form class="form modal__form" id="view">        \n' +
       '            <input class="input modal__input" type="text" name="name" placeholder="Ваше ім\'я..." required><br>\n' +
       '            <input class="input modal__input" type="tel" name="phone" placeholder="Ваш телефон..."><br>\n' +
+      '<input type="text" hidden name="form_id" value="просмотр" />\n' +
       '            <button type="submit"  class="action-btn form__action-btn"> Хочу на перегляд</button>\n' +
       '        </form>\n' +
       '        </div>\n' +
@@ -504,7 +504,6 @@ $(function() {
   $('.js-action__btn').on('click', function(e) {
 
     createModal();
-    validateForm('#view');
 
 
     $('.modal-apply').fadeIn();
@@ -528,6 +527,7 @@ $(function() {
       $('body').removeClass('body_fixed');
     });
 
+    validateForm('#view');
 
   });
 
@@ -553,7 +553,7 @@ $(function() {
       submitHandler: function(form) {
         $.ajax({
           type: 'POST',
-          url: 'php-mailer/mail.php',
+          url: '/php-mailer/mail.php',
           data: $(form).serialize(),
           success: function() {
             window.location.href = '/thanks.html';
@@ -570,13 +570,13 @@ $(function() {
 
   // = More Details Form Start =
 
-  $('.js-plan-info__btn').on('click', function () {
+  $('.js-plan-info__btn').on('click', function() {
     $('.details-form').toggleClass('details-form--visible');
     validateForm('#details');
 
   });
 
-  $('.js-details-close').on('click', function () {
+  $('.js-details-close').on('click', function() {
     $('.details-form').removeClass('details-form--visible');
   });
 

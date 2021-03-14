@@ -5,6 +5,7 @@ module.exports = {
     js: 'src/js/**/*.js',
     images: 'src/images/**/*',
     fonts: 'src/fonts/**/*',
+    copy: 'src/php-mailer/**/*',
   },
   watch: {
     html: 'src/**/*.html',
@@ -19,9 +20,11 @@ module.exports = {
     js: 'build/js',
     images: 'build/images',
     fonts: 'build/fonts',
+    copy: 'build/php-mailer',
+
   },
   inject: {
-    html: 'build/index.html',
+    html: 'build/*.html',
     css: 'build/css/**/*.css',
     js: 'build/js/**/*.js',
   },

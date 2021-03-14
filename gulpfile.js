@@ -36,6 +36,7 @@ const watcher = done => {
 exports.start = series(
   tasks.clean,
   tasks.images,
+  tasks.copy,
   parallel(tasks.css, tasks.fonts, tasks.scripts, tasks.html),
   tasks.inject,
   watcher,
@@ -45,6 +46,7 @@ exports.start = series(
 exports.build = series(
   tasks.clean,
   tasks.images,
+  tasks.copy,
   parallel(tasks.css, tasks.fonts, tasks.scripts, tasks.html),
   tasks.inject,
 );

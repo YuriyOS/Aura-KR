@@ -6,10 +6,6 @@
 
 }
 
-//.plans-slider {
-//  margin-bottom: 50px;
-//}
-
 .plans__h2 {
   margin-bottom: 50px;
   color: white;
@@ -35,8 +31,6 @@
 .plans-slider__item {
   margin: 0px 10px;
   cursor: pointer;
-  //border: 1px solid white;
-  //background-color: #f6f6f6;
 
   &:focus,
   &:hover {
@@ -95,7 +89,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  //background-color: #f6f6f6;
   background-color: rgba(246, 246, 246, .95);
   z-index: 1000;
   overflow-y: auto;
@@ -110,7 +103,6 @@
   left: 50%;
   transform: translateX(-50%);
   border: 2px solid white;
-  //background-color: #f6f6f6;
   background-image: url("/images/dots-dark.png");
   background-color: #2a2a2d;
 

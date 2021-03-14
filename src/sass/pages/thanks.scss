@@ -1,0 +1,90 @@
+.thanks-page__header {
+  background-color: #2a2a2d;
+}
+
+//=== Info Box Start ===
+.info-box {
+  width: 100%;
+
+  @media (min-width: 992px) {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.info-box__content {
+  margin-bottom: 20px;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    margin-bottom: 0;
+    padding-right: 5%;
+    width: 50%;
+  }
+}
+
+.info-box__img {
+  display: block;
+  width: 100%;
+  max-width: 540px;
+
+  @media (min-width: 992px) {
+    width: 50%;
+  }
+}
+// === Info Box End ===
+
+.thanks-page {
+  padding-top: 70px;
+  height: 100vh;
+  display: flex;
+
+  @media (max-width: 992px) {
+    padding-top: 100px;
+  }
+}
+
+.title-helper {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.thanks-page__h2 {
+  text-align: left;
+}
+
+.thanks-page__text {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.thanks-page__margin-bottom {
+  margin-bottom: 10px;
+}
+
+.social-box {
+  display: flex;
+}
+
+.thanks-page__social-icon {
+  margin-right: 30px;
+  width: 40px;
+  height: 40px;
+  fill: #65a0b3;
+
+  &:hover {
+    //fill: ;
+  }
+}
+
+.right-arrow {
+  margin-right: 30px;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
+  fill: #4186D3;
+}
+
