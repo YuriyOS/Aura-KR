@@ -17,7 +17,7 @@
 $(function() {
 
   // Revolution Slider Start
-  function photography_slider() {
+  function photography_slider()   {
     if ($('#home_full_slider').length) {
       $('#home_full_slider').revolution({
         sliderType: 'standard',
@@ -39,19 +39,6 @@ $(function() {
             swipe_direction: 'horizontal',
             drag_block_vertical: false,
           },
-          // bullets: {
-          //   enable: ,
-          //
-          //   hide_onmobile: true,
-          //
-          //   direction: "vertical",
-          //   h_align: "right",
-          //   v_align: "center",
-          //   h_offset: 80,
-          //   v_offset: 0,
-          //   space: 27
-          // },
-
 
           //  Arrows Settings Start
           arrows: {
@@ -190,7 +177,7 @@ $(function() {
   // Mobile Menu End
 
 
-// Sliders Start
+// === Sliders Start ===
 
 //  FLAT SLIDER START
   $('.flat-slider').slick({
@@ -202,13 +189,12 @@ $(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
 
-    // nextArrow: $('.flat-arrow-right'),
     nextArrow: '<button type="button" class="slider-control flat-arrow-right"></button>',
 
-    // prevArrow: $('.flat-arrow-left'),
     prevArrow:
       '<button type="button" class="slider-control flat-arrow-left"></button>',
   });
+//  FLAT SLIDER END
 
 //  GALLERY SLIDER START
   $('.gallery-slider').slick({
@@ -245,6 +231,7 @@ $(function() {
       },
     ],
   });
+//  GALLERY SLIDER END
 
 // PLANS SLIDER START
   $('.plans-slider').slick({
@@ -288,8 +275,26 @@ $(function() {
       },
     ],
   });
+// PLANS SLIDER END
 
-// Sliders End
+//  PROGRESS SLIDER START
+  $('.progress-slider').slick({
+    arrows: true,
+    dots: true,
+    dotsClass: 'flat-slider-dots',
+    appendDots: $('.progress-dots-container'),
+    appendArrows: $('.progress-slider-arrows'),
+    slidesToShow: 1,
+    slidesToScroll: 1,
+
+    nextArrow: '<button type="button" class="slider-control progress-arrow-right"></button>',
+
+    prevArrow:
+      '<button type="button" class="slider-control progress-arrow-left"></button>',
+  });
+//  PROGRESS SLIDER END
+
+// === Sliders End ===
 
 // === Magnific Popup Settings Start
   $('.gallery-slider__img-lg').magnificPopup({
@@ -309,6 +314,16 @@ $(function() {
     fixedBgPos: true,
     fixedContentPos: true,
   });
+
+  $('.progress-slider__img-lg').magnificPopup({
+    type: 'image',
+    gallery: {
+      enabled: true,
+    },
+    fixedBgPos: true,
+    fixedContentPos: true,
+  });
+
 // === Magnific Popup Settings End
 
 
@@ -322,7 +337,7 @@ $(function() {
       square: '26.39',
       floor: '1 - 5',
       flat: '1',
-      price: '16495$',
+      price: '17 150$',
     },
 
     '1b': {
@@ -331,7 +346,7 @@ $(function() {
       square: '21.75',
       floor: '1 - 5',
       flat: '1',
-      price: '20 000$',
+      price: '14 140$',
     },
 
     '1c': {
@@ -340,7 +355,7 @@ $(function() {
       square: '21.71',
       floor: '1 - 5',
       flat: '1',
-      price: '20 000$',
+      price: '14 110$',
     },
 
     '1d': {
@@ -349,7 +364,7 @@ $(function() {
       square: '28.38',
       floor: '1 - 5',
       flat: '1',
-      price: '20 000$',
+      price: '18 450$',
     },
 
     '1e': {
@@ -358,7 +373,7 @@ $(function() {
       square: '31.37',
       floor: '1 - 5',
       flat: '1',
-      price: '20 000$',
+      price: '20 390$',
     },
 
     '1f': {
@@ -367,7 +382,7 @@ $(function() {
       square: '19.4',
       floor: '1 - 5',
       flat: '1',
-      price: '20 000$',
+      price: '12 610$',
     },
 
     '1g': {
@@ -376,7 +391,7 @@ $(function() {
       square: '26.67',
       floor: '1 - 5',
       flat: '1',
-      price: '20 000$',
+      price: '17 075$',
     },
 
     '2a': {
@@ -385,7 +400,7 @@ $(function() {
       square: '28.4',
       floor: '1 - 5',
       flat: '1',
-      price: '20 000$',
+      price: '17 750$',
     },
 
     '2b': {
@@ -394,7 +409,43 @@ $(function() {
       square: '20',
       floor: '1 - 5',
       flat: '1',
-      price: '20 000$',
+      price: '12 500$',
+    },
+
+    '2c': {
+      image: '/images/plans/2c@2x.png',
+      title: 'Однокімнатна 2C',
+      square: '22,58',
+      floor: '1 - 5',
+      flat: '1',
+      price: '14 112$',
+    },
+
+    '2d': {
+      image: '/images/plans/2d@2x.png',
+      title: 'Однокімнатна 2D',
+      square: '25,25',
+      floor: '1 - 5',
+      flat: '1',
+      price: '15 780$',
+    },
+
+    '2e': {
+      image: '/images/plans/2e@2x.png',
+      title: 'Однокімнатна 2E',
+      square: '23,05',
+      floor: '1 - 5',
+      flat: '1',
+      price: '14 410$',
+    },
+
+    '2f': {
+      image: '/images/plans/2f@2x.png',
+      title: 'Однокімнатна 2F',
+      square: '23, 8',
+      floor: '1 - 5',
+      flat: '1',
+      price: '14 875$',
     },
 
   };

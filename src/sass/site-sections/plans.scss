@@ -28,6 +28,7 @@
     width: 100%;
   }
 }
+
 .plans-slider__item {
   margin: 0px 10px;
   cursor: pointer;
@@ -160,7 +161,7 @@
 }
 
 .plans-info__title {
-  margin: 0 0 20px!important;
+  margin: 0 0 20px !important;
   font-weight: 600;
   color: white;
 }
@@ -271,4 +272,5 @@
     transform: rotate(-90deg);
   }
 }
+
 // === Discuss Details Form End ===

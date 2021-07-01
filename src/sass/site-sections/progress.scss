@@ -1,0 +1,50 @@
+.progress {
+  padding-bottom: 80px;
+}
+
+.progress__h2 {
+  margin-bottom: 50px;
+}
+
+.progress-slider {
+  margin-bottom: 30px;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.progress-slider-pc {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.progress-slider__item {
+  @media (min-width: 992px) {
+    width: 33%;
+    flex: 0 0 33%;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}
+
+.progress-slider-arrows {
+  @media (min-width: 992px) {
+    display: none !important;
+  }
+}
+
+.progress-slider__img {
+  max-width: 100%;
+  display: block;
+}

@@ -2,47 +2,25 @@
   background-color: #2a2a2d;
 }
 
-//=== Info Box Start ===
-.info-box {
-  width: 100%;
+.thanks-page__wrap {
+  margin: 0 auto;
+  width: 540px;
+  max-width: 100%;
+
+  p {
+    margin-bottom: 15px;
+  }
 
   @media (min-width: 992px) {
-    margin: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
-
-.info-box__content {
-  margin-bottom: 20px;
-  width: 100%;
-
-  @media (min-width: 992px) {
-    margin-bottom: 0;
-    padding-right: 5%;
-    width: 50%;
-  }
-}
-
-.info-box__img {
-  display: block;
-  width: 100%;
-  max-width: 540px;
-
-  @media (min-width: 992px) {
-    width: 50%;
-  }
-}
-// === Info Box End ===
 
 .thanks-page {
-  padding-top: 70px;
-  height: 100vh;
-  display: flex;
-
-  @media (max-width: 992px) {
-    padding-top: 100px;
-  }
+  padding-top: 100px;
 }
 
 .title-helper {
@@ -53,20 +31,30 @@
 }
 
 .thanks-page__h2 {
+  margin-bottom: 30px;
   text-align: left;
 }
 
+.square-list {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  list-style-type: square;
+
+  &__item {
+    margin-bottom: 10px;
+  }
+}
+
 .thanks-page__text {
-  margin-bottom: 10px;
   font-weight: 700;
 }
 
-.thanks-page__margin-bottom {
-  margin-bottom: 10px;
-}
-
-.social-box {
-  display: flex;
+.right-arrow {
+  margin-right: 30px;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
+  fill: #65a0b3;
 }
 
 .thanks-page__social-icon {
@@ -76,15 +64,18 @@
   fill: #65a0b3;
 
   &:hover {
-    //fill: ;
+    fill: #c7a978;
   }
 }
 
-.right-arrow {
-  margin-right: 30px;
-  margin-bottom: 5px;
-  width: 50px;
-  height: 50px;
-  fill: #4186D3;
-}
+.info-box__img {
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  max-width: 540px;
 
+  @media (min-width: 992px) {
+    margin: 0 0 0 10px;
+    width: 50%;
+  }
+}

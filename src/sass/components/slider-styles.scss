@@ -14,7 +14,8 @@
 }
 
 .flat-arrow-right,
-.gallery-arrow-right {
+.gallery-arrow-right,
+.progress-arrow-right {
   background: url('/images/arrow-right-b.png') 0 0 / 100% no-repeat;
 }
 
@@ -23,7 +24,8 @@
 }
 
 .flat-arrow-left,
-.gallery-arrow-left {
+.gallery-arrow-left,
+.progress-arrow-left {
   background: url('/images/arrow-left-b.png') 0 0 / 100% no-repeat;
 }
 
@@ -41,7 +43,6 @@
   display: flex;
   justify-content: space-between;
   font-size: 0;
-  //list-style: none;
 
   button {
     width: 10px;
@@ -55,18 +56,6 @@
   }
 }
 
-//.flat-slider-dots button,
-//.plan-slider-dots button,
-//.gallery-slider-dots {
-//
-//
-//}
-
-//.flat-slider-dots button,
-//.plan-slider-dots button,
-//.gallery-slider-dots button {
-//}
-
 .flat-slider-dots li.slick-active button,
 .gallery-slider-dots li.slick-active button {
   background: #65a0b3;
@@ -79,7 +68,8 @@
 
 .flat-slider-arrows,
 .plan-slider-arrows,
-.gallery-slider-arrows {
+.gallery-slider-arrows,
+.progress-slider-arrows{
   margin: 0 auto;
   width: 350px;
   max-width: 100%;
@@ -127,238 +117,4 @@
   }
 }
 
-//.gallery-slider__prev {
-//  left: 10px;
-//  //top: unset;
-//  bottom: -50px;
-//
-//  @media (min-width: 768px) {
-//    left: 10%;
-//  }
-//}
-//
-//.gallery-slider__next {
-//  right: 10px;
-//  //top: unset;
-//  bottom: -50px;
-//
-//  @media (min-width: 768px) {
-//    right: 10%;
-//  }
-//}
-
-// Gallery Slider End
-
-
-//.slider-prev {
-//  //left: 10px;
-//  background: url('/images/arrow-left.png') 0 0 / 100% no-repeat;
-//  //z-index: 1;
-//
-//  &:focus {
-//    outline: none;
-//  }
-//}
-//
-//.slider-next {
-//  //right: 10px;
-//  background: url('/images/arrow-right.png') 0 0 / 100% no-repeat;
-//
-//  &:focus {
-//    outline: none;
-//  }
-//}
-//
-////  === Long Slider
-//
-//.plans__slider-control {
-//  font-size: 0;
-//  width: 64px;
-//  height: 64px;
-//  cursor: pointer;
-//  border: none;
-//  background-color: transparent;
-//  background-position: center;
-//  background-repeat: no-repeat;
-//
-//  &:focus {
-//    outline: none;
-//  }
-//}
-//
-//.plans__prev {
-//  left: 10px;
-//  background: url('/images/arrow-left.png') 0 0 / 100% no-repeat;
-//
-//  &:focus {
-//    outline: none;
-//  }
-//}
-//
-//.plans__next {
-//  background: url('/images/arrow-right.png') 0 0 / 100% no-repeat;
-//
-//  &:focus {
-//    outline: none;
-//  }
-//}
-//
-//.long-slider__dots {
-//  width: 150px !important;
-//}
-//
-//.long-slider__dots button {
-//  width: 10px;
-//  flex: 0 0 10px;
-//  height: 10px;
-//  font-size: 0px;
-//  cursor: pointer;
-//  border: none;
-//  outline: none;
-//  background-color: white;
-//}
-//
-//.long-slider__dots li[class='slick-active'] button {
-//  background: #c7a978;
-//}
-//
-//.long-slider__arrows {
-//  margin: 0 auto;
-//  width: 350px;
-//  max-width: 100%;
-//  display: flex;
-//  justify-content: space-between;
-//  align-items: center;
-//}
-//
-////  === Long Slider End
-//
-//// === Flat Slider Start ===
-
-//
-
-//
-//.flat-slider__dots button {
-//  width: 10px;
-//  flex: 0 0 10px;
-//  height: 10px;
-//  font-size: 0px;
-//  cursor: pointer;
-//  border: none;
-//  outline: none;
-//  background-color: #f6f6f6;
-//}
-//
-//.flat-slider__dots li[class='slick-active'] button {
-//  background: #65a0b3;
-//}
-//
-//.flat-slider__arrows {
-//  margin: 0 auto;
-//  width: 450px;
-//  max-width: 100%;
-//  display: flex;
-//  justify-content: space-between;
-//  align-items: center;
-//}
-//
-//.flat-slider__dots {
-//  padding: 0px;
-//  width: 200px;
-//  display: flex;
-//  justify-content: space-between;
-//  font-size: 0;
-//  list-style: none;
-//
-//}
-//
-//.flat__prev {
-//  left: 10px;
-//  background: url('/images/arrow-left-b.png') 0 0 / 100% no-repeat;
-//
-//  &:focus {
-//    outline: none;
-//  }
-//}
-//
-//.flat__next {
-//  background: url('/images/arrow-right-b.png') 0 0 / 100% no-repeat;
-//
-//  //&:focus {
-//  //  outline: none;
-//  //}
-//}
-//
-//.flat__next-arrow {
-//  width: 30px;
-//  height: 30px;
-//  fill: red;
-//}
-//
-////=== Flat Slider End ===
-//
-//// ===== GENERAL Controls Center Start
-//
-//.dots-style-general button {
-//  width: 10px;
-//  flex: 0 0 10px;
-//  height: 10px;
-//  font-size: 0px;
-//  cursor: pointer;
-//  border: none;
-//  outline: none;
-//  background-color: #f6f6f6;
-//}
-//
-//
-//.dots-style-general li[class='slick-active'] button {
-//  background: #65a0b3;
-//}
-//
-//
-//.long-slider__dots,
-//.dots-style-general {
-//  padding: 0px;
-//  width: 200px;
-//  max-width: 100%;
-//  display: flex;
-//  justify-content: space-between;
-//  font-size: 0;
-//  list-style: none;
-//}
-//
-//.arrow-prev-general {
-//  background: url('/images/slider-prev.png') 0 0 / 100% no-repeat;
-//}
-//
-//.arrow-next-general {
-//  background: url('/images/slider-next.png') 0 0 / 100% no-repeat;
-//}
-//
-//// ==== Controls Center End
-//
-//
-
-//
-
-
-// Plans Slider Start
-//.long-slider__prev {
-//  left: 3%;
-//  //background-image: url('/images/arrow-left.png');
-//
-//  @media (min-width: 768px) {
-//    margin-right: 30px;
-//    left: auto;
-//  }
-//}
-//
-//.long-slider__next {
-//  right: 3%;
-//  //background-image: url('/images/arrow-right.png');
-//
-//  @media (min-width: 768px) {
-//    right: auto;
-//  }
-//}
 // Plans Slider End
